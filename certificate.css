@@ -1,0 +1,218 @@
+/* A4 Landscape Setup */
+@page{
+    size:A4 landscape;
+    margin:0;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    background:#071a35;
+    font-family:Georgia,serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+/* Wrapper */
+.certificate-wrapper{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+/* Certificate = Exactly A4 Landscape */
+.certificate{
+    width:297mm;
+    height:210mm;
+    background:white;
+    border:4mm solid #c9a227;
+    border-radius:8mm;
+    padding:12mm 18mm 28mm;
+    position:relative;
+    overflow:hidden;
+}
+.certificate::before{
+
+content:"GP3D";
+
+position:absolute;
+
+font-size:180px;
+
+font-weight:bold;
+
+color:rgba(10,45,107,.05);
+
+top:34%;
+
+left:24%;
+
+transform:rotate(-25deg);
+
+}
+
+.header{
+
+text-align:center;
+
+}
+
+.logo{
+    width:140px;
+    height:auto;
+    display:block;
+    margin:0 auto 15px;
+}
+
+.header h1{
+
+color:#0a2d6b;
+
+margin:8px 0;
+
+font-size:32px;
+
+}
+
+.header p{
+
+color:#666;
+
+}
+
+h2{
+
+text-align:center;
+
+color:#c9a227;
+
+font-size:38px;
+
+letter-spacing:3px;
+
+margin:30px 0;
+
+}
+
+#studentName{
+
+text-align:center;
+
+font-size:46px;
+
+color:#0a2d6b;
+
+margin:15px 0;
+
+}
+
+#courseName{
+
+text-align:center;
+
+font-size:28px;
+
+color:#0b8f5b;
+
+}
+
+.text{
+
+text-align:center;
+
+font-size:21px;
+
+line-height:1.8;
+
+}
+
+.certificate-info{
+
+display:flex;
+
+justify-content:space-around;
+
+margin:40px 0;
+
+text-align:center;
+
+}
+
+/* Signature Section */
+
+.signature-area{
+    position:absolute;
+    left:50%;
+    bottom:7mm;
+    transform:translateX(-50%);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.signature-image{
+    width:60mm;
+    height:60px;
+    display:block;
+}
+
+.signature-line{
+    width:60mm;
+    border-top:1mm solid #333;
+    margin:2mm 0;
+}
+
+.director-name{
+    margin:0;
+    font-size:17px;
+    color:#0a2d6b;
+}
+
+.director-title{
+    margin:5mm 0 0;
+    font-size:17px;
+    color:#555;
+}
+
+
+#downloadBtn{
+
+padding:15px 35px;
+
+font-size:18px;
+
+background:#0b8f5b;
+
+color:white;
+
+border:none;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}
+
+@media print{
+
+#downloadBtn{
+
+display:none;
+
+}
+
+body{
+
+background:white;
+
+padding:0;
+
+}
+
+}

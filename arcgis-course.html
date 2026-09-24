@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ArcGIS Pro - GP3D Academy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+<div class="logo">
+<img src="images/logo.png">
+<span>GP3D Academy</span>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="courses.html">Courses</a>
+<a href="student.html">Dashboard</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>ArcGIS Pro Training</h1>
+<p>Master professional GIS mapping, spatial analysis and cartography.</p>
+</section>
+
+<div class="course-container">
+
+<button class="accordion">Lesson 1: Introduction to ArcGIS Pro</button>
+<div class="panel">
+<p>
+ArcGIS Pro is professional GIS software used by governments, universities and companies for mapping and spatial analysis.
+</p>
+
+<div class="example">
+<strong>Example</strong><br>
+The Nigerian Ministry of Works can use ArcGIS Pro to map federal roads and identify damaged sections.
+</div>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Open ArcGIS Pro and create a new project called <b>My First GP3D Project</b>.
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(0)">Finish Lesson ✓</button>
+</div>
+
+<button class="accordion">Lesson 2: Creating a Project</button>
+<div class="panel">
+<p>
+Every ArcGIS Pro project stores your maps, data and layouts in one organised place.
+</p>
+
+<div class="example">
+<strong>Example</strong><br>
+Instead of saving roads, rivers and schools separately, keep them inside one project.
+</div>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Save your project inside a folder named <b>GP3D Training</b>.
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(1)">Finish Lesson ✓</button>
+</div>
+
+<button class="accordion">Lesson 3: Coordinate Systems</button>
+<div class="panel">
+<p>
+Coordinate systems tell the computer the exact location of every feature on Earth.
+</p>
+
+<div class="example">
+<strong>Example</strong><br>
+If Lagos is placed in the wrong coordinate system, it could appear hundreds of kilometres away.
+</div>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Set your map coordinate system to <b>WGS 1984</b>.
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(2)">Finish Lesson ✓</button>
+</div>
+
+<button class="accordion">Lesson 4: Digitizing Features</button>
+<div class="panel">
+<p>
+Digitizing means drawing real-world features from satellite imagery.
+</p>
+
+<div class="example">
+<strong>Example</strong><br>
+Trace a road, draw a school building and outline a football field.
+</div>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Draw one road and one building from satellite imagery.
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(3)">Finish Lesson ✓</button>
+</div>
+
+<button class="accordion">Lesson 5: Georeferencing</button>
+<div class="panel">
+<p>
+Georeferencing aligns old maps or scanned documents with their real-world locations.
+</p>
+
+<div class="example">
+<strong>Example</strong><br>
+A scanned map of Ilorin from 1985 can be aligned with today's satellite image.
+</div>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Move a scanned image until its roads match satellite imagery.
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(4)">Finish Lesson ✓</button>
+</div>
+
+<button class="accordion">Lesson 6: Spatial Join</button>
+<div class="panel">
+<p>
+Spatial Join combines information from two map layers based on location.
+</p>
+
+<div class="example">
+<strong>Example</strong><br>
+Automatically determine which Local Government each school belongs to.
+</div>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Join schools with Local Government boundaries.
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(5)">Finish Lesson ✓</button>
+</div>
+
+<button class="accordion">Lesson 7: Buffer Analysis</button>
+<div class="panel">
+<p>
+A buffer creates a specified distance around a feature.
+</p>
+
+<div class="example">
+<strong>Example</strong><br>
+Create a 500-metre emergency zone around a hospital.
+</div>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Buffer one road by 100 metres.
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(6)">Finish Lesson ✓</button>
+</div>
+
+<button class="accordion">Lesson 8: Overlay Analysis</button>
+<div class="panel">
+<p>
+Overlay combines multiple layers to solve planning problems.
+</p>
+
+<div class="example">
+<strong>Example</strong><br>
+Find the best place for a new hospital by combining roads, population and available land.
+</div>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Overlay roads and rivers to identify possible bridge locations.
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(7)">Finish Lesson ✓</button>
+</div>
+
+<button class="accordion">Lesson 9: Raster Analysis</button>
+<div class="panel">
+<p>
+Raster analysis works with satellite images and Digital Elevation Models (DEMs).
+</p>
+
+<div class="example">
+<strong>Example</strong><br>
+A slope map helps engineers avoid building on steep hills.
+</div>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Use a DEM to calculate slope.
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(8)">Finish Lesson ✓</button>
+</div>
+
+<button class="accordion">Lesson 10: Professional Map Layout</button>
+<div class="panel">
+<p>
+A good map includes a title, legend, scale bar and north arrow.
+</p>
+
+<div class="example">
+<strong>Example</strong><br>
+Prepare an A4 map suitable for a university dissertation.
+</div>
+
+<div class="practice">
+<strong>Final Project</strong><br>
+Create a professional map of Ilorin and export it as a PDF.
+</div>
+
+<button class="lesson-btn" onclick="completeCourse('ArcGIS Pro')">Complete Course 🎓</button>
+</div>
+
+</div>
+
+<script src="course.js"></script>
+
+</body>
+</html>

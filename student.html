@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<script src="https://js.paystack.co/v2/inline.js"></script>
+<script src="payment.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+    const student = JSON.parse(localStorage.getItem("studentData"));
+
+    const actionBtn = document.getElementById("actionBtn");
+    const message = document.getElementById("certificateMessage");
+
+    // No student
+    if(!student){
+        actionBtn.innerHTML = "Register First";
+        actionBtn.onclick = function(){
+            window.location = "login.html";
+        };
+        return;
+    }
+
+    // Course not completed
+    if(student.completed !== true){
+
+        message.innerHTML =
+        "Choose a course and complete it before requesting your certificate.";
+
+        actionBtn.innerHTML = "Start Learning";
+
+        actionBtn.onclick = function(){
+            window.location = "courses.html";
+        };
+
+    }
+
+    // Course completed
+    else{
+
+        message.innerHTML =
+        "Congratulations! Your course is complete. Pay ₦5,000 to download your GP3D Certificate.";
+
+        actionBtn.innerHTML = "Pay ₦5,000 & Get Certificate";
+
+        actionBtn.onclick = function(){
+
+            startPayment();
+
+        };
+
+    }
+
+});
+</script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    const student = JSON.parse(localStorage.getItem("studentData"));
+
+    const payButton = document.getElementById("payNow");
+
+    if(student && student.completed === true){
+
+        payButton.disabled = false;
+
+        payButton.innerHTML = "Pay & Get Certificate";
+
+        payButton.style.background = "#0b8f5b";
+
+        payButton.style.cursor = "pointer";
+
+    }
+
+});
+
+</script>
+<body>
+
+<section class="hero">
+
+<h2 id="welcome"></h2>
+
+<p>Welcome to your learning dashboard.</p>
+
+<div class="services">
+
+<div class="card">
+
+<h3>Google Earth Engine</h3>
+
+</div>
+
+<div class="card">
+
+<h3>ArcGIS Pro</h3>
+
+</div>
+
+<div class="card">
+
+<h3>QGIS</h3>
+
+</div>
+
+<div class="card">
+
+    <h3>GP3D Certificate</h3>
+
+    <p id="certificateMessage">
+        Complete a course to unlock your certificate.
+    </p>
+
+    <h2>₦5,000</h2>
+
+    <button id="actionBtn" class="lesson-btn">
+        Start Learning
+    </button>
+
+</div>
+
+    

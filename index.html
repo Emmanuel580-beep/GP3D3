@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Geoinformation Production & 3D Model Enterprise (GP3D)</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/"
+  }
+}
+</script>
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="navbar">
+
+<div class="logo">
+
+<img src="./images/logo.png" alt="GP3D Logo" class="logo-image">
+
+<span>GP3D</span>
+
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="comparison.html">Compare</a>
+<a href="dashboard.html">Client</a>
+<a href="login.html">Student</a>
+<a href="admin.html">Admin</a>
+<a href="#contact">Contact</a>
+
+<button id="themeButton">🌙</button>
+
+</nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-left">
+
+<p class="small-text">
+GEOSPATIAL SOLUTIONS FOR A BETTER PLANET
+</p>
+
+<h1>
+Turning Earth Data into
+<span>Real-World Impact</span>
+</h1>
+
+<p class="hero-description">
+Geoinformation Production & 3D Model Enterprise (GP3D) delivers professional GIS, Remote Sensing, Geospatial Analysis, and 3D Modelling services for researchers, governments, NGOs and private organisations.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="services.html" class="btn-green">
+Our Services
+</a>
+
+<a href="portfolio.html" class="btn-outline">
+View Portfolio
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div id="earth-container"></div>
+
+</div>
+
+</section>
+
+<!-- ================= GET STARTED ================= -->
+
+<section style="text-align:center;padding:30px;">
+
+<button onclick="showMessage()" class="btn-green">
+Get Started
+</button>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services">
+
+<h2>Our Services</h2>
+
+<div class="services-grid">
+
+<div class="card">
+<h3>GIS Mapping</h3>
+<p>Professional map production for planning and decision-making.</p>
+</div>
+
+<div class="card">
+<h3>Remote Sensing</h3>
+<p>Satellite image processing and environmental monitoring.</p>
+</div>
+
+<div class="card">
+<h3>Google Earth Engine</h3>
+<p>Cloud-based geospatial analysis using Landsat, Sentinel and MODIS.</p>
+</div>
+
+
+<div class="card">
+<h3>3D Modelling</h3>
+<p>Terrain modelling, DEM analysis and 3D visualization.</p>
+</div>
+
+<div class="card">
+<h3>Research Support</h3>
+<p>GIS analysis for B.Sc, M.Sc and Ph.D research projects.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SAMPLE MAP ================= -->
+
+<section style="padding:40px;">
+
+<h2 style="text-align:center;">Sample GIS Project Location</h2>
+
+<div id="map" style="height:420px;border-radius:20px;"></div>
+
+</section>
+
+<!-- ================= TRAINING ================= -->
+
+<section id="training">
+
+<h2>Professional GIS Training</h2>
+
+<div class="services-grid">
+
+<div class="card">
+<h3>Google Earth Engine</h3>
+<p>Satellite image analysis using cloud computing.</p>
+</div>
+
+<div class="card">
+<h3>ArcGIS Pro</h3>
+<p>Professional GIS mapping and spatial analysis.</p>
+</div>
+
+<div class="card">
+<h3>QGIS</h3>
+<p>Open-source GIS software for mapping and analysis.</p>
+</div>
+
+<div class="card">
+<h3>Surfer</h3>
+<p>Surface modelling and contour mapping.</p>
+</div>
+
+<div class="card">
+<h3>Python for GIS</h3>
+<p>Automation of GIS workflows using Python.</p>
+</div>
+
+<div class="card">
+<h3>Remote Sensing Analysis</h3>
+<p>NDVI, LULC, Change Detection and more.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= TRAINING REGISTRATION ================= -->
+
+<section id="register">
+
+<h2>Register for Training</h2>
+
+<form>
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<select required>
+
+<option>Google Earth Engine</option>
+<option>ArcGIS Pro</option>
+<option>QGIS</option>
+<option>Surfer</option>
+<option>Python for GIS</option>
+
+</select>
+
+<button type="submit">
+Register Now
+</button>
+
+</form>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+<h2>Contact Us</h2>
+
+<form action="https://formsubmit.co/geoinformationproduction@gmail.com" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+<input type="hidden" name="_captcha" value="false">
+
+<input type="hidden" name="_next" value="thanks.html">
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+<div class="contact-info">
+
+<p>📞 08106244065</p>
+
+<p>✉️ geoinformationproduction@gmail.com</p>
+
+<p>Business Number: 3711101</p>
+
+<a href="https://wa.me/2348106244065" target="_blank">
+Chat on WhatsApp
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+<p>
+
+© 2026 GP3D – Geoinformation Production & 3D Model Enterprise
+
+</p>
+
+</footer>
+
+<!-- Floating WhatsApp -->
+
+<a href="https://wa.me/2348106244065" class="whatsapp">
+💬
+</a>
+
+<!-- ================= SCRIPTS ================= -->
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script src="script.js"></script>
+
+<script type="module" src="earth.js"></script>
+
+<script>
+
+const map=L.map("map").setView([8.4966,4.5421],11);
+
+L.tileLayer(
+"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+{
+attribution:"© OpenStreetMap contributors"
+}
+).addTo(map);
+
+L.marker([8.4966,4.5421])
+.addTo(map)
+.bindPopup("GP3D Sample GIS Project");
+
+</script>
+
+</body>
+</html>

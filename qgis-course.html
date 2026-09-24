@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QGIS - GP3D Academy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+<div class="logo">
+<img src="images/logo.svg">
+<span>GP3D Academy</span>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="courses.html">Courses</a>
+<a href="student.html">Dashboard</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>QGIS Training</h1>
+<p>Learn open-source GIS for mapping and spatial analysis.</p>
+</section>
+
+<div class="course-container">
+
+<button class="accordion">Lesson 1: Installing QGIS</button>
+<div class="panel">
+<p>
+QGIS is a free GIS software used by professionals worldwide.
+</p>
+
+<div class="example">
+<strong>Example</strong><br>
+Instead of paying for expensive software, you can install QGIS free.
+</div>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Download the latest Long-Term Release (LTR).
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(0)">Finish Lesson ✓</button>
+</div>
+
+<button class="accordion">Lesson 2: Understanding the Interface</button>
+<div class="panel">
+<p>
+The Layers Panel stores your map layers while the Map Canvas displays them.
+</p>
+
+<div class="example">
+<strong>Example</strong><br>
+Think of layers as transparent sheets stacked together.
+</div>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Add one empty map project.
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(1)">Finish Lesson ✓</button>
+</div>
+
+<button class="accordion">Lesson 3: Adding GIS Data</button>
+<div class="panel">
+<p>
+QGIS can open shapefiles, satellite images, GPS points and Excel tables.
+</p>
+
+<div class="example">
+<strong>Example</strong><br>
+Open Nigeria's state boundary shapefile.
+</div>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Load a shapefile and a satellite image together.
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(2)">Finish Lesson ✓</button>
+</div>
+
+<button class="accordion">Lesson 4: Styling Layers</button>
+<div class="panel">
+<p>
+Colours and symbols make maps easier to understand.
+</p>
+
+<div class="example">
+<strong>Example</strong><br>
+Make rivers blue and forests green.
+</div>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Change the colour of one layer.
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(3)">Finish Lesson ✓</button>
+</div>
+
+<button class="accordion">Lesson 5: Editing Features</button>
+<div class="panel">
+<p>
+Editing allows you to create new roads, buildings and boundaries.
+</p>
+
+<div class="example">
+<strong>Example</strong><br>
+Draw a new school compound.
+</div>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Create one polygon.
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(4)">Finish Lesson ✓</button>
+</div>
+
+<button class="accordion">Lesson 6: Installing Plugins</button>
+<div class="panel">
+<p>
+Plugins add powerful tools to QGIS.
+</p>
+
+<div class="example">
+<strong>Example</strong><br>
+Install QuickMapServices to view Google Satellite imagery.
+</div>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Enable QuickMapServices.
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(5)">Finish Lesson ✓</button>
+</div>
+
+<button class="accordion">Lesson 7: Buffer and Clip Tools</button>
+<div class="panel">
+<p>
+Buffers create distance while Clip cuts data to your study area.
+</p>
+
+<div class="example">
+<strong>Example</strong><br>
+Clip Nigeria roads so only Kwara State remains.
+</div>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Create a 1 km buffer around a river.
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(6)">Finish Lesson ✓</button>
+</div>
+
+<button class="accordion">Lesson 8: Raster Calculator</button>
+<div class="panel">
+<p>
+The Raster Calculator performs mathematical calculations on satellite images.
+</p>
+
+<div class="example">
+<strong>Example</strong><br>
+Calculate NDVI from Sentinel-2 imagery.
+</div>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Create a simple NDVI map.
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(7)">Finish Lesson ✓</button>
+</div>
+
+<button class="accordion">Lesson 9: DEM Analysis</button>
+<div class="panel">
+<p>
+A DEM shows the height of the Earth's surface.
+</p>
+
+<div class="example">
+<strong>Example</strong><br>
+Generate a hillshade map to make mountains appear more realistic.
+</div>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Create a slope map.
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(8)">Finish Lesson ✓</button>
+</div>
+
+<button class="accordion">Lesson 10: Print Layout</button>
+<div class="panel">
+<p>
+The Print Layout creates maps ready for reports and presentations.
+</p>
+
+<div class="example">
+<strong>Example</strong><br>
+Design an A4 map with a title, legend, scale bar and north arrow.
+</div>
+
+<div class="practice">
+<strong>Final Project</strong><br>
+Create a professional map of Kwara State and export it as a PDF.
+</div>
+
+<button class="lesson-btn" onclick="completeCourse('QGIS')">Complete Course 🎓</button>
+</div>
+
+</div>
+
+<script src="course.js"></script>
+
+</body>
+</html>

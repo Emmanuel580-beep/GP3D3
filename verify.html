@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Verifying Payment</title>
+
+<style>
+
+body{
+
+font-family:Arial;
+
+background:#071a35;
+
+color:white;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2 id="status">
+
+Verifying Payment...
+
+</h2>
+
+<script>
+
+const params=new URLSearchParams(window.location.search);
+
+const reference=params.get("reference");
+
+fetch(`http://localhost:3000/verify/${reference}`)
+
+.then(res=>res.json())
+
+.then(data=>{
+
+if(
+
+data.status===true &&
+
+data.data.status==="success"
+
+){
+
+document.getElementById("status").innerHTML="Payment Successful";
+
+setTimeout(()=>{
+
+window.location="certificate.html";
+
+},1500);
+
+}
+
+else{
+
+document.getElementById("status").innerHTML="Payment Verification Failed";
+
+}
+
+})
+
+.catch(()=>{
+
+document.getElementById("status").innerHTML="Server Connection Error";
+
+});
+
+</script>
+
+</body>
+
+</html>
+localStorage.setItem("certificatePaid","true");

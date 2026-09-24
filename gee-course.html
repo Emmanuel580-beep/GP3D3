@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Earth Engine - GP3D Academy</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+
+<img src="images/logo.png">
+
+<span>GP3D Academy</span>
+
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="courses.html">Courses</a>
+
+<a href="student.html">Dashboard</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Google Earth Engine Training</h1>
+
+<p>Master cloud-based satellite image analysis from beginner to professional level.</p>
+
+</section>
+
+<div class="course-container">
+
+<!-- LESSON 1 -->
+
+<button class="accordion">Lesson 1: Introduction to Google Earth Engine</button>
+
+<div class="panel">
+
+<p>
+
+Google Earth Engine (GEE) is a free online platform developed by Google that allows you to analyse millions of satellite images without downloading them. Instead of using your computer to process huge files, Google's cloud computers do the work for you.
+
+</p>
+
+<div class="example">
+
+<strong>Simple Example</strong><br>
+
+Imagine you want to compare how Ilorin looked in 2000 and 2025. Instead of downloading hundreds of Landsat images, GEE lets you display both years within a few seconds.
+
+</div>
+
+<div class="practice">
+
+<strong>Practice Exercise</strong><br>
+
+Open Google Earth Engine, search for <b>Ilorin, Nigeria</b>, and zoom into the city.
+
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(0)">Finish Lesson ✓</button>
+
+</div>
+
+<!-- LESSON 2 -->
+
+<button class="accordion">Lesson 2: Understanding the Earth Engine Interface</button>
+
+<div class="panel">
+
+<p>
+
+The Earth Engine interface has four important parts: the Code Editor, the Map, the Console, and the Inspector. The Code Editor is where you write commands, while the Map displays your results.
+
+</p>
+
+<div class="example">
+
+<strong>Simple Example</strong><br>
+
+The Inspector works like clicking Google Maps. When you click on any location, it shows the coordinates and information about that point.
+
+</div>
+
+<div class="practice">
+
+<strong>Practice Exercise</strong><br>
+
+Click on the Asa River near Ilorin using the Inspector and observe the coordinates that appear.
+
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(1)">Finish Lesson ✓</button>
+
+</div>
+
+<!-- LESSON 3 -->
+
+<button class="accordion">Lesson 3: JavaScript Basics</button>
+
+<div class="panel">
+
+<p>
+
+Google Earth Engine uses JavaScript to control maps and satellite images. The first thing you'll learn is how to create variables and display results.
+
+</p>
+
+<div class="code-box">
+
+var city = "Ilorin";
+print(city);
+
+</div>
+
+<div class="example">
+
+<strong>Simple Example</strong><br>
+
+A variable is like writing someone's name on a file. Instead of writing "Ilorin" repeatedly, you simply use the variable called <b>city</b>.
+
+</div>
+
+<div class="practice">
+
+<strong>Practice Exercise</strong><br>
+
+Change "Ilorin" to "Abuja" and run the code again.
+
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(2)">Finish Lesson ✓</button>
+
+</div>
+
+<!-- LESSON 4 -->
+
+<button class="accordion">Lesson 4: Working with Image Collections</button>
+
+<div class="panel">
+
+<p>
+
+Satellite images are stored inside Image Collections. An Image Collection contains thousands of satellite images taken over different dates.
+
+</p>
+
+<div class="example">
+
+<strong>Simple Example</strong><br>
+
+Instead of opening one Landsat image after another, you can ask Earth Engine to show every Landsat image captured over Abuja during 2024.
+
+</div>
+
+<div class="practice">
+
+<strong>Practice Exercise</strong><br>
+
+Filter Landsat images between January and December 2024.
+
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(3)">Finish Lesson ✓</button>
+
+</div>
+
+<!-- LESSON 5 -->
+
+<button class="accordion">Lesson 5: Processing Landsat Images</button>
+
+<div class="panel">
+
+<p>
+
+Satellite images often contain clouds that hide the land below. Earth Engine allows us to choose the clearest image before analysis.
+
+</p>
+
+<div class="code-box">
+
+landsat.sort("CLOUD_COVER").first();
+
+</div>
+
+<div class="example">
+
+<strong>Simple Example</strong><br>
+
+Imagine taking ten photographs during rainy weather. You naturally choose the clearest one. Earth Engine does exactly the same thing.
+
+</div>
+
+<div class="practice">
+
+<strong>Practice Exercise</strong><br>
+
+Select the clearest Landsat image over Ilorin.
+
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(4)">Finish Lesson ✓</button>
+
+</div>
+
+<!-- LESSON 6 -->
+
+<button class="accordion">Lesson 6: Using Sentinel-2 Images</button>
+
+<div class="panel">
+
+<p>
+
+Sentinel-2 provides higher-resolution images than Landsat, making buildings, roads and farms much easier to identify.
+
+</p>
+
+<div class="example">
+
+<strong>Simple Example</strong><br>
+
+A newly constructed road in Lagos appears much clearer in Sentinel-2 than in Landsat.
+
+</div>
+
+<div class="practice">
+
+<strong>Practice Exercise</strong><br>
+
+Display Sentinel-2 imagery over Lagos and compare it with Landsat.
+
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(5)">Finish Lesson ✓</button>
+
+</div>
+
+<!-- LESSON 7 -->
+
+<button class="accordion">Lesson 7: Calculating NDVI</button>
+
+<div class="panel">
+
+<p>
+
+NDVI (Normalized Difference Vegetation Index) measures how healthy vegetation is. Healthy plants appear greener because they reflect more Near Infrared light.
+
+</p>
+
+<div class="example">
+
+<strong>Simple Example</strong><br>
+
+A healthy maize farm appears bright green, while dry grass appears yellow or brown.
+
+</div>
+
+<div class="practice">
+
+<strong>Practice Exercise</strong><br>
+
+Calculate NDVI for farmland around Ilorin and identify the healthiest vegetation.
+
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(6)">Finish Lesson ✓</button>
+
+</div>
+
+<!-- LESSON 8 -->
+
+<button class="accordion">Lesson 8: Calculating NDWI</button>
+
+<div class="panel">
+
+<p>
+
+NDWI (Normalized Difference Water Index) helps identify rivers, lakes and wetlands.
+
+</p>
+
+<div class="example">
+
+<strong>Simple Example</strong><br>
+
+After heavy rainfall, NDWI highlights flooded areas much more clearly than an ordinary satellite image.
+
+</div>
+
+<div class="practice">
+
+<strong>Practice Exercise</strong><br>
+
+Highlight the Asa River near Ilorin using NDWI.
+
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(7)">Finish Lesson ✓</button>
+
+</div>
+
+<!-- LESSON 9 -->
+
+<button class="accordion">Lesson 9: Land Use and Land Cover Classification</button>
+
+<div class="panel">
+
+<p>
+
+Land Use Classification groups land into categories such as Built-up Areas, Vegetation, Water, Farmland and Bare Land.
+
+</p>
+
+<div class="example">
+
+<strong>Simple Example</strong><br>
+
+If Ilorin expands into nearby farmland, classification makes those changes easy to identify.
+
+</div>
+
+<div class="practice">
+
+<strong>Practice Exercise</strong><br>
+
+Create a simple five-class land-cover map.
+
+</div>
+
+<button class="lesson-btn" onclick="nextLesson(8)">Finish Lesson ✓</button>
+
+</div>
+
+<!-- LESSON 10 -->
+
+<button class="accordion">Lesson 10: Exporting Your Results</button>
+
+<div class="panel">
+
+<p>
+
+After completing your analysis, you'll export your maps for reports, research and professional GIS projects.
+
+</p>
+
+<div class="example">
+
+<strong>Simple Example</strong><br>
+
+Export your NDVI map as a PNG for a university assignment or as a GeoTIFF for further GIS analysis.
+
+</div>
+
+<div class="practice">
+
+<strong>Final Practical Project</strong><br>
+
+Create an NDVI map of Ilorin, add a title and legend, and export the final map.
+
+</div>
+
+<button class="lesson-btn" onclick="completeCourse('Google Earth Engine')">
+
+Complete Course 🎓
+
+</button>
+
+</div>
+
+</div>
+
+<script src="course.js"></script>
+
+</body>
+
+</html>
